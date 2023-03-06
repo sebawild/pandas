@@ -6873,6 +6873,7 @@ class DataFrame(NDFrame, OpsMixin):
         ignore_index: bool = False,
         key: ValueKeyFunc = None,
     ) -> DataFrame | None:
+        print('Called DataFrame.sort_values() on df of length', len(self))
         inplace = validate_bool_kwarg(inplace, "inplace")
         axis = self._get_axis_number(axis)
         ascending = validate_ascending(ascending)
