@@ -7,7 +7,7 @@ pytest-cov
 pytest-xdist>=1.31
 psutil
 pytest-asyncio>=0.17
-boto3
+boto3==1.17.106 # added version to avoid endless search
 python-dateutil
 numpy
 pytz
@@ -23,16 +23,18 @@ gcsfs
 jinja2
 lxml
 matplotlib>=3.6.1, <3.7.0
-numba>=0.53.1
+#numba>=0.53.1 # doesn't work with Python 3.11 yet
 numexpr>=2.8.0
 openpyxl<3.1.1
 odfpy
 pandas-gbq
-psycopg2
-pyarrow<10
+#psycopg2 # build error
+psycopg2-binary
+#pyarrow<10
+pyarrow # removed as compilation fails; not sure if this is OK ...
 pymysql
 pyreadstat
-tables
+tables>=3.8
 python-snappy
 pyxlsb
 s3fs>=2021.08.0
