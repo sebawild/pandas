@@ -3,7 +3,7 @@
 ## Finding sorting algorithm
 
 Some high-level comments [here](https://stackoverflow.com/questions/44205655/sorting-algorithm-used-by-pandas-sort-values-when-the-kind-parameter-is-not-app).
-[`get_group_index_sorter`](https://github.com/pandas-dev/pandas/blob/main/pandas/core/sorting.py#L630)
+[`get_group_index_sorter`](https://github.com/sebawild/pandas/blob/main/pandas/core/sorting.py#L630)
 seems to be the main decision point: it either does numpy's mergesort or some counting sort
 
 The docs for `DataFrame.sort_values` points to this source:
